@@ -23,5 +23,5 @@
 To get the list of commands
 
 ```
-python3 unmaskmail.py --help
+python3 snyk-golang-audit.py --help
 ```
