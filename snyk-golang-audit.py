@@ -62,7 +62,7 @@ def snyk_audit_result(item_package, number, json_dict):
                 for nversion in vulnerable_versions:
                     if semantic_version.Version(item_package['version']) in semantic_version.SimpleSpec(nversion):
                         vulnerability_page.append({"type": vulnerability[element], "severity": severity[element],
-                                                   "semversion": html.unescape(semversion[element]), "url":"https://snyk.io/vuln" + link[element]})
+                                                   "semversion": html.unescape(semversion[element]), "url":"https://snyk.io" + link[element]})
         if vulnerability_page:
             last_package = json_response[len(json_response)-1]['package']
             if last_package != item_package['package']:
