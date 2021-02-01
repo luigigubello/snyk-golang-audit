@@ -56,7 +56,7 @@ def snyk_audit_result(item_package, number, json_dict):
         vulnerability_page = []
         for element in range(len(vulnerability)):
             if semversion[element] == '*' or semversion[element] == '':
-                vulnerability_page.append({"type":vulnerability[element],"severity":severity[element],"semversion":semversion[element],"url":"https://snyk.io/vuln" + link[element]})
+                vulnerability_page.append({"type":vulnerability[element],"severity":severity[element],"semversion":semversion[element],"url":"https://snyk.io" + link[element]})
             else:
                 vulnerable_versions = html.unescape(semversion[element]).split()
                 for nversion in vulnerable_versions:
